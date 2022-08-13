@@ -1,8 +1,21 @@
 # isucon_11
 isucon_11
 
-- isucon/webapp のみをgithu登 録する
+- isucon/webapp のみをgithu登録する
 - isucon/webapp/rustは除く、大きい&不要と思われるため
+
+以下のようなことをしています
+
+```
+$ cd /home                                       # /home へ移動
+$ mv isucon isucon.org                           # isuconディレクトリを別名で保存
+$ git clone https://github.com/seigot/isucon_11  # isucon_11 を clone
+$ ln -s isucon_11 isucon                         # isucon --> isucon_11 へシンボリックリンクを貼る
+$ ls -l isucon
+lrwxrwxrwx 1 root root 9 Aug 13 20:49 isucon -> isucon_11
+```
+
+サイズは以下の通り
 
 ```
 /home/isucon$ du -sh isucon
