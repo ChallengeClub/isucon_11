@@ -23,9 +23,10 @@ CREATE TABLE `isu_condition` (
   `condition` VARCHAR(255) NOT NULL,
   `message` VARCHAR(255) NOT NULL,
   `created_at` DATETIME(6) DEFAULT CURRENT_TIMESTAMP(6),
-  PRIMARY KEY(`jia_isu_uuid`, `timestamp`)
-# PRIMARY KEY(`id`)
+  PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4;
+
+alter table isu_condition add index isu_index (`jia_isu_uuid`, `timestamp`);
 
 CREATE TABLE `user` (
   `jia_user_id` VARCHAR(255) PRIMARY KEY,
